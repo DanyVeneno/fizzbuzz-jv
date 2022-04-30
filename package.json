@@ -1,18 +1,18 @@
-  {
+{
   "name": "fizzbuzz-jv",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "linter":"node ./node_modules/eslint/bin/eslint.js",
-    "linter-fix":"node ./node_modules/eslint/bin/eslint.js . --fix"
+    "linter": "node ./node_modules/eslint/bin/eslint.js",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.0"
+    "express": "^4.18.1"
   },
   "devDependencies": {
     "eslint": "^8.14.0",
