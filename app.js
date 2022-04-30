@@ -1,17 +1,31 @@
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/',(req,res)=>{
+    res.send('Aqui Estoy')
+})
+
+app.listen(port,()=>{
+    console.log(`App listening on port ${port}`)
+})
+
+//check
+
 const fs = require("fs");
 
 // Part 1 Read json file ===========================
 const rawdata = fs.readFileSync("explorers.json");
 const explorers = JSON.parse(rawdata);
 
-//console.log("jellow you have a lot of work")
-//console.log(explorers)
+console.log("jellow you have a lot of work")
+console.log(explorers)
 
 
 
 
 // Part 2: Get the quantity of explorers names in node
-const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");
+const explorersInNode = explorers.filter((explorer) => explorer.mission == "node" + explorersInNode.lenght);
 //console.log(explorersInNode.length)
 
 
@@ -33,7 +47,7 @@ const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer
 // Score: 5, Trick: 5.
 
 const assignFizzTrick = function(explorer){
-    if(explorer.score%3 === 0){
+    if(explorer.score % 3 === 0){
         explorer.trick = "FIZZ";
         return explorer;
     }else{
@@ -42,7 +56,7 @@ const assignFizzTrick = function(explorer){
     }
 };
 
-const explorersInNodeAndFizzTrick = explorersInNode.map((explorer) => assignFizzTrick(explorer));
+const explorersInNodeAndFizzTrick = explorersInNode.map((explorer) => assignFizzTrick(explorersInNodeAndFizzTrick));
 
 
 
@@ -92,4 +106,3 @@ const explorersInNodeAndFizzBuzzTrick = explorersInNode.map((explorer) => assign
 //and the value BUZZ, if is just divisible by 3 set 
 //the property trick and the value FIZZ, otherwise set
 //the property trick and the score value. TODO
-
